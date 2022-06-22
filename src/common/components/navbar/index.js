@@ -22,6 +22,6 @@ export const pages = [
   {
     key: "contact-us",
     name: "Contact Us",
-    href: "#",
+    href: "/contact-us",
   },
 ];

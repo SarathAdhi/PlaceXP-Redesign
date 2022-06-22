@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import clsx from "clsx";
@@ -6,9 +6,14 @@ import { LinkedItem } from "../elements/LinkedItem";
 import { pages } from ".";
 
 export default function Navbar() {
-  const [selectedTabKey, setSelectedTabKey] = useState(pages[0].key);
+  const [selectedTabKey, setSelectedTabKey] = useState("");
+
+  useEffect(() => {
+    setSelectedTabKey(localStorage.getItem("selectedTabKey"));
+  }, []);
+
   return (
-    <Popover className="w-full fixed bg-white border-b-2 border-gray-100">
+    <Popover className="w-full sticky top-0 bg-white border-b-2 border-gray-100">
       <div className="w-11/12 mx-auto">
         <div className="flex justify-between items-center py-2 md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -27,7 +32,7 @@ export default function Navbar() {
               <LinkedItem
                 key={key}
                 href={href}
-                onClick={() => setSelectedTabKey(key)}
+                onClick={() => localStorage.setItem("selectedTabKey", key)}
                 className={clsx(
                   "px-2 py-1 font-medium rounded-full transition-all",
                   selectedTabKey === key
@@ -79,7 +84,9 @@ export default function Navbar() {
                     <LinkedItem
                       key={key}
                       href={href}
-                      onClick={() => setSelectedTabKey(key)}
+                      onClick={() =>
+                        localStorage.setItem("selectedTabKey", key)
+                      }
                       className={clsx(
                         "px-2 py-1 text-center text-lg font-medium rounded-full transition-all",
                         selectedTabKey === key
