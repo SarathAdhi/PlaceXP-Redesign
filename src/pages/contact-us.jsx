@@ -5,7 +5,7 @@ import { Input } from "../common/components/elements/Input";
 
 export default function ContactUs() {
   return (
-    <PageLayout className="h-[90vh] justify-center">
+    <PageLayout title="Contact" className="h-[90vh] justify-center">
       <div className="w-4/5 flex flex-col lg:flex-row lg:justify-between items-center">
         <div className="flex flex-col  items-center lg:items-start gap-2 mb-10 lg:mb-0">
           <H3 className="text-primary-300 text-center">HAVE QUESTIONS?</H3>

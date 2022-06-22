@@ -5,7 +5,7 @@ import { H2 } from "../../common/components/elements/Text";
 
 export default function ViewInterview({ interviewDetails }) {
   return (
-    <PageLayout className="flex gap-5 flex-col items-center pt-10">
+    <PageLayout title={interviewDetails.postTitle} className="flex gap-5 flex-col items-center pt-10">
       <H2 className="font-bold">{interviewDetails.postTitle}</H2>
       {interviewDetails.videoLink && (
         <iframe
@@ -18,7 +18,7 @@ export default function ViewInterview({ interviewDetails }) {
       )}
 
       <div
-        className="text-lg text-center mt-10"
+        className="text-lg mt-10"
         dangerouslySetInnerHTML={{ __html: interviewDetails.postBody }}
       />
     </PageLayout>

@@ -28,7 +28,7 @@ export default function Interviews() {
   });
 
   return (
-    <PageLayout className=" gap-10 pt-10">
+    <PageLayout title="Interviews" className=" gap-10 pt-10">
       <div className="w-4/5 flex flex-col lg:flex-row lg:justify-between items-center">
         <div className="flex flex-col  items-center lg:items-start gap-2 mb-10 lg:mb-0">
           <H3 className="text-primary-300 text-center">ALL ABOUT INTERVIEWS</H3>
