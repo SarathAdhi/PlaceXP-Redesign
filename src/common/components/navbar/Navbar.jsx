@@ -4,6 +4,7 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import clsx from "clsx";
 import { LinkedItem } from "../elements/LinkedItem";
 import { pages } from ".";
+import Image from "next/image";
 
 export default function Navbar() {
   const [selectedTabKey, setSelectedTabKey] = useState("");
@@ -18,7 +19,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center py-2 md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <LinkedItem href="/">
-              <img className="h-12" src="/assets/placexp-logo.png" alt="" />
+              <Image width={40} height={50} src="/placexp-Logo.png" alt="" />
             </LinkedItem>
           </div>
 
@@ -66,10 +67,11 @@ export default function Navbar() {
             <div className="pt-2 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div>
-                  <img
-                    className="h-12"
-                    src="/assets/placexp-logo.png"
-                    alt="Workflow"
+                  <Image
+                    width={40}
+                    height={50}
+                    src="/placexp-Logo.png"
+                    alt=""
                   />
                 </div>
                 <div className="-mr-2">
@@ -108,39 +110,3 @@ export default function Navbar() {
     </Popover>
   );
 }
-
-// import clsx from "clsx";
-// import React, { useState } from "react";
-// import { pages } from ".";
-// import { LinkedItem } from "../elements/LinkedItem";
-// import { H4 } from "../elements/Text";
-
-// export const Navbar = () => {
-//   const [selectedTabKey, setSelectedTabKey] = useState(pages[0].key);
-
-//   return (
-//     <header className="w-full md:h-12 md:pt-8 px-10 fixed flex items-center justify-between bg-transparent">
-//       <div className="flex items-center gap-2">
-//         <img className="w-10" src="/assets/placexp-logo.png" />
-//         <H4 className="hidden md:block font-extrabold text-primary-900">PlaceXP</H4>
-//       </div>
-//       <div className="flex gap-2 flex-col md:flex-row">
-//         {pages.map(({ key, name, href }) => (
-//           <LinkedItem
-//             key={key}
-//             href={href}
-//             onClick={() => setSelectedTabKey(key)}
-//             className={clsx(
-//               "px-2 py-1 font-medium rounded-full transition-all",
-//               selectedTabKey === key
-//                 ? "bg-primary-600 text-white"
-//                 : "text-primary-900"
-//             )}
-//           >
-//             {name}
-//           </LinkedItem>
-//         ))}
-//       </div>
-//     </header>
-//   );
-// };
