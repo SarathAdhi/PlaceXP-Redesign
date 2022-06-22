@@ -8,11 +8,11 @@ export default function index() {
   const [allInterviews, setAllInterviews] = useState([]);
   const [searchInputText, setSearchInputText] = useState("");
 
-  async function getInterviewsData() {
-    const { data } = await AxiosGet("/post/getall");
-    setAllInterviews(data);
-  }
   useEffect(() => {
+    async function getInterviewsData() {
+      const { data } = await AxiosGet("/post/getall");
+      setAllInterviews(data);
+    }
     getInterviewsData();
   }, []);
 
