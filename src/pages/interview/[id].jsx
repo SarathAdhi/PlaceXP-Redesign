@@ -3,7 +3,7 @@ import PageLayout from "../../common/layout/PageLayout";
 import { AxiosGet } from "../../lib/axios";
 import { H2 } from "../../common/components/elements/Text";
 
-export default function View({ interviewDetails }) {
+export default function ViewInterview({ interviewDetails }) {
   return (
     <PageLayout className="flex gap-5 flex-col items-center pt-10">
       <H2 className="font-bold">{interviewDetails.postTitle}</H2>

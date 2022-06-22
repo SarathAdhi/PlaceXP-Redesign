@@ -4,7 +4,7 @@ import { H1, H3, H4, P } from "../../common/components/elements/Text";
 import PageLayout from "../../common/layout/PageLayout";
 import { AxiosGet } from "../../lib/axios";
 
-export default function index() {
+export default function Interviews() {
   const [allInterviews, setAllInterviews] = useState([]);
   const [searchInputText, setSearchInputText] = useState("");
 
