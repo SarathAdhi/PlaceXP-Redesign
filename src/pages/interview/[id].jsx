@@ -11,7 +11,7 @@ export default function View({ interviewDetails }) {
       <H2 className="font-bold">{interviewDetails.postTitle}</H2>
       {interviewDetails.videoLink && (
         <iframe
-          className="w-full sm:w-[445px] h-[200px] sm:h-[250px]"
+          className="w-full sm:w-[445px] h-[200px] sm:h-[250px] rounded-lg"
           src={interviewDetails.videoLink}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

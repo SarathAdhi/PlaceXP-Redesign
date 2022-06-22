@@ -18,14 +18,14 @@ export default function ContactUs() {
         </div>
         <div className="w-1/2 h-96 shadow-xl flex flex-col gap-5 justify-center items-center bg-primary-200 rounded-xl">
           <Input
-            label="Email"
-            className="w-full sm:w-96 shadow-lg border-[2px] border-primary-600 bg-transparent focus:outline-none"
+            label="Email:"
+            className="w-full !py-3 sm:w-96 shadow-lg border-[2px] border-primary-600 bg-transparent focus:outline-none"
             placeholder="Enter your email here..."
             type="text"
           />
           <Input
-            label="Query"
-            className="w-full sm:w-96 shadow-lg border-[2px] border-primary-600 bg-transparent focus:outline-none"
+            label="Query:"
+            className="w-full !py-3 sm:w-96 shadow-lg border-[2px] border-primary-600 bg-transparent focus:outline-none"
             placeholder="Enter your query here..."
             type="text"
           />
