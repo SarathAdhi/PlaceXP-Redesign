@@ -10,7 +10,8 @@ export default function Navbar() {
   const [selectedTabKey, setSelectedTabKey] = useState("");
 
   useEffect(() => {
-    setSelectedTabKey(localStorage.getItem("selectedTabKey"));
+    const currentKey = localStorage.getItem("selectedTabKey");
+    setSelectedTabKey(currentKey === null ? "home" : currentKey);
   }, []);
 
   return (
@@ -19,7 +20,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center py-2 md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <LinkedItem href="/">
-              <Image width={40} height={50} src="/placexp-Logo.png" alt="" />
+              <Image width={40} height={50} src="/logo.png" alt="" />
             </LinkedItem>
           </div>
 
@@ -67,12 +68,7 @@ export default function Navbar() {
             <div className="pt-2 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div>
-                  <Image
-                    width={40}
-                    height={50}
-                    src="/placexp-Logo.png"
-                    alt=""
-                  />
+                  <Image width={40} height={50} src="/logo.png" alt="" />
                 </div>
                 <div className="-mr-2">
                   <Popover.Button className="inline-flex items-center justify-center text-gray-400">
