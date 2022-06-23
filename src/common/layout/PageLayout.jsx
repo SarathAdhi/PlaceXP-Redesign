@@ -11,7 +11,7 @@ export default function PageLayout({ title, className, children }) {
         <title>{title}</title>
       </Head>
       <Navbar />
-      <main className="bg-slate-50 min-h-screen flex flex-col items-center">
+      <main className="pb-10 bg-slate-50 min-h-screen flex flex-col items-center">
         <div className={clsx("w-11/12 flex flex-col items-center", className)}>
           {children}
         </div>

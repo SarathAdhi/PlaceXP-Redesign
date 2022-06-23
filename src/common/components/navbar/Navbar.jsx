@@ -15,7 +15,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <Popover className="w-full sticky top-0 bg-white border-b-2 border-gray-100">
+    <Popover className="w-full sticky top-0 z-50 bg-white border-b-2 border-gray-100">
       <div className="w-11/12 mx-auto">
         <div className="flex justify-between items-center py-2 md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
