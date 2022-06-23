@@ -20,7 +20,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center py-2 md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <LinkedItem href="/">
-              <Image width={40} height={50} src="/logo.png" alt="" />
+              <Image width={40} height={50} src="/assets/logo.png" alt="PlaceXP" />
             </LinkedItem>
           </div>
 
