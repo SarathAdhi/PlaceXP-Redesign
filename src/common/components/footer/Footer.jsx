@@ -22,7 +22,7 @@ const socialMediaLinks = [
 
 export default function Footer() {
   return (
-    <footer className="pt-10 py-2 md:py-5 flex justify-center items-center bg-white">
+    <footer className="py-3 md:py-5 flex justify-center items-center bg-white">
       <div className="w-11/12 flex justify-between items-center">
         <H5 className="text-primary-900 mr-5 text-sm sm:text-lg font-semibold">
           Connect With Us

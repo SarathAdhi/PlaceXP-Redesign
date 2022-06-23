@@ -3,7 +3,7 @@ import React from "react";
 
 export const Input = ({ label, type, placeholder, className, onChange }) => {
   return (
-    <div className="flex flex-col">
+    <div className="w-full flex flex-col">
       {label && (
         <label className="text-primary-900 font-semibold pb-1">{label}</label>
       )}
