@@ -8,21 +8,27 @@ const cardsDetails = [
   {
     title: "Interviews",
     img: "https://img.icons8.com/external-icongeek26-outline-icongeek26/64/undefined/external-interview-office-icongeek26-outline-icongeek26.png",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    text: "Nervous about interviews? Worry no more because we have here a conglomeration of interview experiences of our seniors at various prestigous institutions.",
     button: "Explore Interviews",
   },
   {
     title: "Hackathons",
     img: "https://img.icons8.com/wired/64/undefined/code.png",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    text: "Wanna feel the rush behind coding competitions? Register ASAP and start participating in all the hackathons conducted by well-known organisations. ",
     button: "Explore Hackathons",
   },
   {
     title: "Mock Interviews",
     img: "https://img.icons8.com/ios/50/undefined/document-1.png",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    text: "Worried about cracking the aptitude test in your interviews? Fret not because PlaceXP has come up with a detailed collection of tests conducted by various prestigious institutions.",
     button: "Explore Mock Interviews",
   },
+  {
+    title: "Club Events",
+    img: "https://img.icons8.com/external-sbts2018-mixed-sbts2018/58/000000/external-events-social-media-basic-1-sbts2018-mixed-sbts2018.png",
+    text: "Missing out on a lot of events conducted at VITC? Don't worry, we have the collection of all the club events that will be taking place at our campus for you to participate.",
+    button: "Explore Club Events",
+  }
 ];
 
 export default function Home() {
