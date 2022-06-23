@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { H1, H3, H6, P } from "../../common/components/elements/Text";
+import { H1, H3, H4, H6, P } from "../../common/components/elements/Text";
 import { PopDownCard } from "../../common/components/PopDownCard";
 import PageLayout from "../../common/layout/PageLayout";
 import { AxiosGet } from "../../lib/axios";
@@ -29,7 +29,6 @@ export default function View() {
     }
   });
 
-  console.log(allHackathons);
   return (
     <PageLayout title="View Hackathons" className="mt-20 gap-16">
       <div className="w-4/5 flex flex-col lg:flex-row lg:justify-between items-center">
@@ -48,64 +47,45 @@ export default function View() {
           onChange={({ target }) => setSearchInputText(target.value)}
         />
       </div>
-      <div className="flex flex-wrap gap-5 justify-center">
-        {filteredHackathonsDetails.map((hackathon, index) => (
-          <PopDownCard key={hackathon._id} title={hackathon.hackathonTitle}>
-            {hackathon.hackathonOrganizer && (
-              <div className="w-full text-center text-black pt-0.5 flex justify-around items-center gap-1">
-                <P className="font-semibold bg-primary-200 p-2 rounded-lg">
-                  Organizer: {hackathon.hackathonOrganizer.value}
-                </P>
-                <P className="font-semibold bg-primary-200 p-2 rounded-lg">
-                  Deadline: {hackathon.deadline}
-                </P>
-              </div>
-            )}
-            {hackathon.hackathonBody && (
-              <H6 className="text-center">{hackathon.hackathonBody}</H6>
-            )}
-            {hackathon.hackathonLink && (
-              <a
-                className="px-2 py-0.5 rounded-lg bg-primary-500 text-white"
-                href={hackathon.hackathonLink}
-              >
-                Link
-              </a>
-            )}
-            {hackathon.tags.length !== 0 && (
-              <div className="text-center text-black pt-0.5 flex justify-center items-center gap-1">
-                <P>Tags:</P>
-                {hackathon.tags.map((tag, index) => (
-                  <P key={index}>{tag}</P>
-                ))}
-              </div>
-            )}
-          </PopDownCard>
-        ))}
-
-        {/* <ViewCards
-        title="ANYTHING ABOUT HACKATHONS?"
-        text="Get it here."
-        data={allHackathons}
-        setSearchInputText={setSearchInputText}
-      >
-        {filteredHackathonsDetails.map((hackathon, index) => {
-          return (
-            <LinkedItem
-              key={hackathon._id}
-              href={`${hackathon.hackathonLink}`}
-              className="w-96 flex flex-col gap-2 bg-white p-2 text-black rounded-lg border-[2px] border-primary-200 duration-300 shadow-md hover:shadow-primary-600"
-            >
-              <div className="h-full py-10 px-4 flex flex-col gap-y-5 bg-primary-100 rounded-lg text-center">
-                <H4 className="font-semibold">{hackathon.hackathonTitle}</H4>
-                
-              </div>
-              
-            </LinkedItem>
-          );
-        })}
-      </ViewCards> */}
-      </div>
+      {allHackathons.length === 0 ? (
+        <H4 className="pt-20">Loading...</H4>
+      ) : (
+        <div className="flex flex-wrap gap-5 justify-center">
+          {filteredHackathonsDetails.map((hackathon, index) => (
+            <PopDownCard key={hackathon._id} title={hackathon.hackathonTitle}>
+              {hackathon.hackathonOrganizer && (
+                <div className="w-full text-center text-black pt-0.5 flex justify-around items-center gap-1">
+                  <P className="font-semibold bg-primary-200 p-2 rounded-lg">
+                    Organizer: {hackathon.hackathonOrganizer.value}
+                  </P>
+                  <P className="font-semibold bg-primary-200 p-2 rounded-lg">
+                    Deadline: {hackathon.deadline}
+                  </P>
+                </div>
+              )}
+              {hackathon.hackathonBody && (
+                <H6 className="text-center">{hackathon.hackathonBody}</H6>
+              )}
+              {hackathon.hackathonLink && (
+                <a
+                  className="px-2 py-0.5 rounded-lg bg-primary-500 text-white"
+                  href={hackathon.hackathonLink}
+                >
+                  Link
+                </a>
+              )}
+              {hackathon.tags.length !== 0 && (
+                <div className="text-center text-black pt-0.5 flex justify-center items-center gap-1">
+                  <P>Tags:</P>
+                  {hackathon.tags.map((tag, index) => (
+                    <P key={index}>{tag}</P>
+                  ))}
+                </div>
+              )}
+            </PopDownCard>
+          ))}
+        </div>
+      )}
     </PageLayout>
   );
 }
