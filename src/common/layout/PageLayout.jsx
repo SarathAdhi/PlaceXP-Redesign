@@ -12,7 +12,7 @@ export default function PageLayout({ title, className, children }) {
       </Head>
       <Navbar />
       <main className="pb-10 bg-slate-50 min-h-screen flex flex-col items-center">
-        <div className={clsx("w-11/12 flex flex-col items-center", className)}>
+        <div className={clsx("w-11/12 h-full flex flex-col items-center", className)}>
           {children}
         </div>
       </main>

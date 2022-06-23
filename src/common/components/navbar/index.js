@@ -7,17 +7,17 @@ export const pages = [
   {
     key: "interviews",
     name: "Interviews",
-    href: "/interview/",
+    href: "/interview",
   },
   {
     key: "hackathons",
     name: "Hackathons",
-    href: "#",
+    href: "/hackathons",
   },
   {
     key: "club-events",
     name: "Club Events",
-    href: "#",
+    href: "/club-events",
   },
   {
     key: "contact-us",
