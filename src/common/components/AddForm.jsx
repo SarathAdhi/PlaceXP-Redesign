@@ -10,11 +10,7 @@ const initialValues = {
   video: "",
 };
 
-export const AddForm = ({ title, inputFields = [] }) => {
-  const handleSubmit = (values) => {
-    alert(JSON.stringify(values));
-  };
-
+export const AddForm = ({ title, onSubmit, inputFields = [] }) => {
   return (
     <div className="w-full mt-10 flex flex-col gap-20">
       <H1 className="font-extrabold text-center text-primary-900">{title}</H1>
@@ -22,7 +18,7 @@ export const AddForm = ({ title, inputFields = [] }) => {
         <Form
           initialValues={initialValues}
           inputFields={inputFields}
-          onSubmit={handleSubmit}
+          onSubmit={onSubmit}
         />
       )}
     </div>

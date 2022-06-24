@@ -1,6 +1,7 @@
 import React from "react";
 import { AddForm } from "../../common/components/AddForm";
 import PageLayout from "../../common/layout/PageLayout";
+import { AxiosPost } from "../../lib/axios";
 
 const inputFields = [
   {
@@ -41,9 +42,9 @@ const inputFields = [
 ];
 
 export default function Add() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(event);
+  const handleSubmit = (values) => {
+    // AxiosPost("/hackathon/add", values);
+    console.log(values);
   };
 
   return (
@@ -51,7 +52,7 @@ export default function Add() {
       <AddForm
         title="Add Interviews"
         inputFields={inputFields}
-        handleSubmit={handleSubmit}
+        onSubmit={handleSubmit}
       />
     </PageLayout>
   );
