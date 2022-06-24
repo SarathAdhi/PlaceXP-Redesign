@@ -1,8 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import Navbar from "../components/navbar/Navbar";
 import clsx from "clsx";
-import Footer from "../components/footer/Footer";
 
 export default function PageLayout({ title, className, children }) {
   return (
@@ -10,7 +8,6 @@ export default function PageLayout({ title, className, children }) {
       <Head>
         <title>{title}</title>
       </Head>
-      <Navbar />
       <main className="pb-10 bg-slate-50 min-h-screen flex flex-col items-center">
         <div
           className={clsx(
@@ -21,7 +18,6 @@ export default function PageLayout({ title, className, children }) {
           {children}
         </div>
       </main>
-      <Footer />
     </>
   );
 }

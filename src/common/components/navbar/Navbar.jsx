@@ -7,20 +7,20 @@ import { pages } from ".";
 import Image from "next/image";
 
 export default function Navbar() {
-  const [selectedTabKey, setSelectedTabKey] = useState("");
-
-  useEffect(() => {
-    const currentKey = localStorage.getItem("selectedTabKey");
-    setSelectedTabKey(currentKey === null ? "home" : currentKey);
-  }, []);
+  const [selectedTabKey, setSelectedTabKey] = useState("home");
 
   return (
     <Popover className="w-full sticky top-0 z-50 bg-white border-b-2 border-gray-100">
       <div className="w-11/12 mx-auto">
         <div className="flex justify-between items-center py-2 md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <LinkedItem href="/">
-              <Image width={40} height={50} src="/assets/logo.png" alt="PlaceXP" />
+            <LinkedItem href="/" onClick={() => setSelectedTabKey("home")}>
+              <Image
+                width={40}
+                height={50}
+                src="/assets/logo.png"
+                alt="PlaceXP"
+              />
             </LinkedItem>
           </div>
 
@@ -34,7 +34,7 @@ export default function Navbar() {
               <LinkedItem
                 key={key}
                 href={href}
-                onClick={() => localStorage.setItem("selectedTabKey", key)}
+                onClick={() => setSelectedTabKey(key)}
                 className={clsx(
                   "px-2 py-1 font-medium rounded-full transition-all",
                   selectedTabKey === key
@@ -71,7 +71,10 @@ export default function Navbar() {
                   <Image width={40} height={50} src="/logo.png" alt="" />
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="inline-flex items-center justify-center text-gray-400">
+                  <Popover.Button
+                    id="navbar-close-btn"
+                    className="inline-flex items-center justify-center text-gray-400"
+                  >
                     <XIcon className="w-8" aria-hidden="true" />
                   </Popover.Button>
                 </div>
@@ -82,9 +85,10 @@ export default function Navbar() {
                     <LinkedItem
                       key={key}
                       href={href}
-                      onClick={() =>
-                        localStorage.setItem("selectedTabKey", key)
-                      }
+                      onClick={() => {
+                        setSelectedTabKey(key);
+                        document.getElementById("navbar-close-btn").click();
+                      }}
                       className={clsx(
                         "px-2 py-1 text-center text-lg font-medium rounded-full transition-all",
                         selectedTabKey === key

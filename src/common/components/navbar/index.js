@@ -7,7 +7,7 @@ export const pages = [
   {
     key: "interviews",
     name: "Interviews",
-    href: "/interview",
+    href: "/interviews",
   },
   {
     key: "hackathons",

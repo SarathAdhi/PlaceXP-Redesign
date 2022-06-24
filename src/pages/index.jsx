@@ -28,12 +28,12 @@ const cardsDetails = [
     img: "https://img.icons8.com/external-sbts2018-mixed-sbts2018/58/000000/external-events-social-media-basic-1-sbts2018-mixed-sbts2018.png",
     text: "Missing out on a lot of events conducted at VITC? Don't worry, we have the collection of all the club events that will be taking place at our campus for you to participate.",
     button: "Explore Club Events",
-  }
+  },
 ];
 
 export default function Home() {
   return (
-    <PageLayout className="gap-5">
+    <PageLayout title="Home" className="gap-5">
       <div className="flex justify-between flex-col lg:flex-row items-center gap-10 mt-10 lg:mt-0">
         <div className="lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-start lg:pr-20">
           <H3 className="text-primary-600 font-medium leading-normal">
@@ -58,11 +58,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="">
+      <div>
         <H2 className="text-primary-900 text-center font-semibold mb-6">
           Resources We Offer
         </H2>
-        <div className="flex flex-wrap gap-5 justify-center items-center">
+        <div className="flex flex-wrap gap-5 justify-center">
           {cardsDetails.map((details, index) => (
             <Card key={index} {...details} />
           ))}
