@@ -15,9 +15,9 @@ const ModalDetails = ({
   tags,
 }) => (
   <div className="flex flex-col items-center gap-5">
-    {EventOrganizer && (
-      <div className="w-full text-center text-black pt-0.5 flex justify-around items-center gap-1">
-        <div className="w-1/2">
+    {EventOrganizer && EventDay && Deadline && EventTime && (
+      <div className="w-full text-center text-black pt-0.5 flex justify-around flex-wrap items-center">
+        <div>
           <P className="font-semibold bg-primary-200 p-2 m-2 rounded-lg">
             Organizer: {EventOrganizer}
           </P>
@@ -25,7 +25,7 @@ const ModalDetails = ({
             Event Day: {EventDay.substring(0, 10)}
           </P>
         </div>
-        <div className="w-1/2">
+        <div>
           <P className="font-semibold bg-primary-200 p-2 m-2 rounded-lg">
             Deadline: {Deadline.substring(0, 10)}
           </P>
@@ -64,7 +64,6 @@ export default function View() {
       setAllClubEvents(data);
     }
     getClubEventsData();
-    console.log(allClubEvents);
   }, []);
 
   const filteredClubEventsDetails = allClubEvents.filter((clubevent) => {
