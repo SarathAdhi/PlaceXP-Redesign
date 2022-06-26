@@ -1,5 +1,5 @@
 import React from "react";
-import { PageLayout } from "../common/layout/PageLayout";
+import PageLayout from "../common/layout/PageLayout";
 
 export default function Policy() {
   return (
