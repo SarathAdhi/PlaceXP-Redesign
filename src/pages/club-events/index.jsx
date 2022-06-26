@@ -38,9 +38,9 @@ const ModalDetails = ({
           <P className="font-semibold bg-primary-200 p-2 m-2 rounded-lg">
             Event Time: {EventTime}
           </P>
+         )}
         </div>
       </div>
-    )}
     {EventDesc && <H6 className="text-center">{EventDesc}</H6>}
     {RegisLink && (
       <a className="underline text-sky-700" href={RegisLink}>
