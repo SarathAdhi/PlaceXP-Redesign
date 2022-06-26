@@ -15,20 +15,26 @@ const ModalDetails = ({
   tags,
 }) => (
   <div className="flex flex-col items-center gap-5">
-    {EventOrganizer && EventDay && Deadline && EventTime && (
       <div className="w-full text-center text-black pt-0.5 flex justify-around flex-wrap items-center">
         <div>
+         { EventOrganizer && (
           <P className="font-semibold bg-primary-200 p-2 m-2 rounded-lg">
             Organizer: {EventOrganizer}
           </P>
+         )}
+         { EventDay && (
           <P className="font-semibold bg-primary-200 p-2 m-2 rounded-lg">
             Event Day: {EventDay.substring(0, 10)}
           </P>
+         )}
         </div>
         <div>
+         { Deadline && (
           <P className="font-semibold bg-primary-200 p-2 m-2 rounded-lg">
             Deadline: {Deadline.substring(0, 10)}
           </P>
+         )}
+         { EventTime && (
           <P className="font-semibold bg-primary-200 p-2 m-2 rounded-lg">
             Event Time: {EventTime}
           </P>
