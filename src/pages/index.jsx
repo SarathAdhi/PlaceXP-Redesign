@@ -44,7 +44,7 @@ export default function Home() {
             We keep you updated with all the academic and placement stuff of VIT
             Chennai.
           </H1>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex justify-center flex-wrap gap-3">
             <LinkedItemStyled href="#resources">
               Start Exploring
             </LinkedItemStyled>

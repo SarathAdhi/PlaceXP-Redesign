@@ -3,7 +3,6 @@ import "../styles/globals.css";
 import { useRouter } from "next/router";
 import Navbar from "../common/components/navbar/Navbar";
 import Footer from "../common/components/footer/Footer";
-import { PageLoadingAnimation } from "../common/PageLoadingAnimation";
 
 function MyApp({ Component, pageProps }) {
   const [isPageLoading, setIsPageLoading] = useState(true);
@@ -20,7 +19,7 @@ function MyApp({ Component, pageProps }) {
   if (isPageLoading)
     return (
       <div className="flex h-screen justify-center items-center">
-        <PageLoadingAnimation className="w-60" />
+        <img className="w-60" src="/assets/loading.gif" />
       </div>
     );
   return (
