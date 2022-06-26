@@ -16,13 +16,13 @@ export default function Policy() {
             exploring opportunities and enhancing outreach using the online
             search and other tools available for all the VITians. It is owned
             and managed by the team of PlaceXP as a registered club of Vellore
-            Technology, Chennai, 600127(India).
+            Technology, Chennai, 600127India.
           </p>
           <p>
             In order for all of our users to enjoy the PlaceXP Services, it is
             important to follow the terms and conditions described in this Terms
-            of Use ("Terms of Use or "Terms"). By visiting the PlaceXP Site
-            (whether or not you are a registered user) or using any of the
+            of Use "Terms of Use or "Terms". By visiting the PlaceXP Site
+            whether or not you are a registered user or using any of the
             PlaceXP Services on any of the Sites, you are accepting this Terms
             of Use. Please take a moment to carefully read through these Terms.
             It is our goal to provide you with an excellent user experience, so
@@ -43,9 +43,9 @@ export default function Policy() {
               Service as acceptance of the Terms from that point onwards.
             </li>
             <li>
-              You may not use the Service and may not accept the Terms if (a)
+              You may not use the Service and may not accept the Terms if a
               you are not of legal age to form a binding contract with PlaceXP,
-              or (b) you are a person who is either barred or otherwise legally
+              or b you are a person who is either barred or otherwise legally
               prohibited from receiving or using the Service under the laws of
               the country in which you are resident or from which you access or
               use the Service.
@@ -122,7 +122,7 @@ export default function Policy() {
           <H3>Maintenance of Service:</H3>
           <p>
             PlaceXP may at any time deactivate or suspend the Member's access to
-            and/or the Services (as the case may be) without any prior notice in
+            and/or the Services as the case may be without any prior notice in
             order to carry out system maintenance, upgrading, testing, repairs
             and other related work. Without prejudice to the other provisions of
             this Agreement, PlaceXP shall not be liable for any loss and damage,
@@ -171,7 +171,7 @@ export default function Policy() {
             </li>
             <li>
               contains restricted or password only access pages, or hidden pages
-              or images (those not linked to or from another accessible page)
+              or images those not linked to or from another accessible page
             </li>
             <li>
               provides any kind of instructional information about illegal
@@ -198,7 +198,7 @@ export default function Policy() {
             We may change our Service and policies, and we may need to make
             changes to these Terms so that they accurately reflect our Service
             and policies. Unless otherwise required by law, we will notify you
-            (for example, through our Service) before we make changes to these
+            for example, through our Service before we make changes to these
             Terms and give you an opportunity to review them before they go into
             effect. Then, if you continue to use the Service, you will be bound
             by the updated Terms. If you do not want to agree to these or any
