@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { H1, H3, H4, H6, P } from "../../common/components/elements/Text";
+import { H4, H6, P } from "../../common/components/elements/Text";
 import Modal from "../../common/components/Modal";
+import { ViewCards } from "../../common/components/ViewCards";
 import PageLayout from "../../common/layout/PageLayout";
 import { AxiosGet } from "../../lib/axios";
 
@@ -24,10 +25,7 @@ const ModalDetails = ({
     )}
     {hackathonBody && <H6 className="text-center">{hackathonBody}</H6>}
     {hackathonLink && (
-      <a
-        className="px-2 py-0.5 rounded-lg bg-primary-500 text-white"
-        href={hackathonLink}
-      >
+      <a className="underline text-sky-700" href={hackathonLink}>
         Link
       </a>
     )}
@@ -43,7 +41,9 @@ const ModalDetails = ({
 );
 
 export default function View() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [allHackathons, setAllHackathons] = useState([]);
+  const [selectedHackathon, setSelectedHackathon] = useState("");
   const [searchInputText, setSearchInputText] = useState("");
 
   useEffect(() => {
@@ -53,8 +53,6 @@ export default function View() {
     }
     getHackathonsData();
   }, []);
-
-  console.log(allHackathons);
 
   const filteredHackathonsDetails = allHackathons.filter((hackathon) => {
     if (searchInputText === "") {
@@ -70,38 +68,52 @@ export default function View() {
   });
 
   return (
-    <PageLayout title="View Hackathons" className="mt-20 gap-16">
-      <div className="w-4/5 flex flex-col lg:flex-row lg:justify-between items-center">
-        <div className="flex flex-col  items-center lg:items-start gap-2 mb-10 lg:mb-0">
-          <H3 className="text-primary-300 text-center uppercase">
-            anything about hackathons?
-          </H3>
-          <H1 className="font-extrabold text-center text-primary-900">
-            Get it here.
-          </H1>
-        </div>
-        <input
-          className="shadow-xl px-2 py-1 w-full sm:w-96 rounded-md border-[2px] border-gray-300 focus:outline-none"
-          placeholder="Search here..."
-          type="text"
-          onChange={({ target }) => setSearchInputText(target.value)}
-        />
-      </div>
-      {allHackathons.length === 0 ? (
-        <H4 className="pt-20">Loading...</H4>
-      ) : (
-        <div className="flex flex-wrap gap-5 justify-center">
-          {filteredHackathonsDetails.map((hackathon, index) => (
-            <Modal
+    <PageLayout title="View Hackathons" className="mt-10">
+      <ViewCards
+        title="anything about hackathons?"
+        text="Get it here."
+        data={allHackathons}
+        setSearchInputText={setSearchInputText}
+      >
+        {filteredHackathonsDetails.map((hackathon) => {
+          return (
+            <button
               key={hackathon._id}
-              buttonTitle={hackathon.hackathonTitle}
-              title={hackathon.hackathonTitle}
+              onClick={() => {
+                setSelectedHackathon(hackathon);
+                setIsModalOpen(true);
+              }}
+              className="w-96 flex flex-col gap-2 bg-white p-2 text-black rounded-lg border-[2px] border-primary-200 duration-300 shadow-md hover:shadow-primary-600"
             >
-              <ModalDetails {...hackathon} />
-            </Modal>
-          ))}
-        </div>
-      )}
+              <div className="w-full flex-1 p-4 flex flex-col gap-5 justify-between bg-primary-100 rounded-lg text-center">
+                <H4 className="font-semibold">{hackathon.hackathonTitle}</H4>
+                {hackathon.hackathonBody && (
+                  <P>
+                    <strong>Description:</strong>{" "}
+                    {hackathon.hackathonBody?.substring(0, 100)}...
+                  </P>
+                )}
+              </div>
+              {
+                <P className="w-full text-center pt-0.5">
+                  Tags:{" "}
+                  {hackathon.tags.length !== 0
+                    ? hackathon.tags.join(", ")
+                    : "No Tags found"}
+                </P>
+              }
+            </button>
+          );
+        })}
+      </ViewCards>
+
+      <Modal
+        title={selectedHackathon.hackathonTitle}
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+      >
+        <ModalDetails {...selectedHackathon} />
+      </Modal>
     </PageLayout>
   );
 }

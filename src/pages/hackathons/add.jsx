@@ -75,7 +75,6 @@ export default function Add({ router, session }) {
     } else {
       showErrorAlert({ title: data.msg });
     }
-    console.log(data);
   };
 
   return (

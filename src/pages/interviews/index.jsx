@@ -29,7 +29,7 @@ export default function Interviews() {
   });
 
   return (
-    <PageLayout title="Interviews" className="pt-10">
+    <PageLayout title="Interviews" className="mt-10">
       <ViewCards
         title="ALL ABOUT INTERVIEWS"
         text="Get it here."

@@ -3,6 +3,7 @@ import PageLayout from "../common/layout/PageLayout";
 import { H1, H2, H3 } from "../common/components/elements/Text";
 import { Card } from "../modules/home/Card";
 import { Button } from "../common/components/elements/Button";
+import { LinkedItemStyled } from "../common/components/elements/LinkedItem";
 
 const cardsDetails = [
   {
@@ -43,7 +44,12 @@ export default function Home() {
             We keep you updated with all the academic and placement stuff of VIT
             Chennai.
           </H1>
-          <Button>Start Exploring</Button>
+          <div className="flex flex-wrap gap-3">
+            <LinkedItemStyled href="#resources">
+              Start Exploring
+            </LinkedItemStyled>
+            <LinkedItemStyled href="#">About Us</LinkedItemStyled>
+          </div>
         </div>
         <div className="w-full sm:w-96 lg:w-1/2">
           <Image
@@ -58,7 +64,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div>
+      <div id="resources" className="pt-5 sm:pt-20">
         <H2 className="text-primary-900 text-center font-semibold mb-6">
           Resources We Offer
         </H2>

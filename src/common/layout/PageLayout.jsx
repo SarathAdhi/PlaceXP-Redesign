@@ -8,7 +8,7 @@ export default function PageLayout({ title, className, children }) {
       <Head>
         <title>{title}</title>
       </Head>
-      <main className="pb-10 bg-slate-50 min-h-screen flex flex-col items-center">
+      <main className="py-10 bg-slate-50 min-h-screen flex flex-col items-center">
         <div
           className={clsx(
             "w-11/12 h-full flex flex-col items-center",
