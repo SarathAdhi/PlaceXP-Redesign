@@ -93,6 +93,9 @@ export default function View() {
                     {hackathon.hackathonBody?.substring(0, 100)}...
                   </P>
                 )}
+                {hackathon.deadline && (
+                  <P><strong>Deadline: </strong>{hackathon.deadline}</P>
+                )}
               </div>
               {
                 <P className="w-full text-center pt-0.5">
