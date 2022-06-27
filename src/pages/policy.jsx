@@ -9,7 +9,7 @@ export default function Policy() {
       <div className="text-justify mb-5">
         <H4 className="font-medium">Welcome to PlaceXP!</H4>
         <P className="">{"This website is a multi-utility platform to facilitate all the VITians timely access to all the academic related resources and solve any queries related to the curriculum or co-curriculum, for exploring opportunities and enhancing outreach using the online search and other tools available for all the VITians. It is owned and managed by the team of PlaceXP as a registered club of Vellore Technology, Chennai, 600127(India)."}</P>
-        <P className="">{"In order for all of our users to enjoy the PlaceXP Services, it is important to follow the terms and conditions described in this Terms of Use ('Terms of Use' or 'Terms'). By visiting the PlaceXP Site (whether or not you are a registered user) or using any of the PlaceXP Services on any of the Sites, you are accepting this Terms of Use. Please take a moment to carefully read through these Terms. It is our goal to provide you with an excellent user experience, so if you have any questions or comments about these Terms, please contact us at placexpvitc@gmail.com."}</P>
+        <P className="">{"In order for all of our users to enjoy the PlaceXP Services, it is important to follow the terms and conditions described in this Terms of Use (`Terms of Use` or `Terms`). By visiting the PlaceXP Site (whether or not you are a registered user) or using any of the PlaceXP Services on any of the Sites, you are accepting this Terms of Use. Please take a moment to carefully read through these Terms. It is our goal to provide you with an excellent user experience, so if you have any questions or comments about these Terms, please contact us at placexpvitc@gmail.com."}</P>
       </div>
 
       <div className="text-justify mb-5">
@@ -32,13 +32,13 @@ export default function Policy() {
       </div>
 
       <div className="text-justify mb-5">
-        <H4 className="font-medium">Who can't use PlaceXP:</H4>
+        <H4 className="font-medium">Who cannot use PlaceXP:</H4>
         <P className="">{"You can’t use this site if-"}</P>
         <ol className="list-decimal my-2 ml-5">
           <li><P className="">{"You misuse our data."}</P></li>
           <li><P className="">{"We have prohibited you from using our site."}</P></li>
           <li><P className="">{"You have violated our community guidelines."}</P></li>
-          <li><P className="">{"You don’t agree with our policies."}</P></li>
+          <li><P className="">{"You don`t agree with our policies."}</P></li>
           <li><P className="">{"You attempt to create accounts or access or collect information in unauthorized ways."}</P></li>
         </ol>
       </div>
@@ -65,7 +65,7 @@ export default function Policy() {
 
       <div className="text-justify mb-5">
         <H4 className="font-medium">Maintenance of Service:</H4>
-        <P className="">{"PlaceXP may at any time deactivate or suspend the Member's access to and/or the Services (as the case may be) without any prior notice in order to carry out system maintenance, upgrading, testing, repairs and other related work. Without prejudice to the other provisions of this Agreement, PlaceXP shall not be liable for any loss and damage, costs and expense that the Member may suffer or incur, and no fees or charges payable by the Member to the PlaceXP shall be deducted, refunded or rebated, as a result of such deactivation or suspension."}</P>
+        <P className="">{"PlaceXP may at any time deactivate or suspend the Member`s access to and/or the Services (as the case may be) without any prior notice in order to carry out system maintenance, upgrading, testing, repairs and other related work. Without prejudice to the other provisions of this Agreement, PlaceXP shall not be liable for any loss and damage, costs and expense that the Member may suffer or incur, and no fees or charges payable by the Member to the PlaceXP shall be deducted, refunded or rebated, as a result of such deactivation or suspension."}</P>
       </div>
 
       <div className="text-justify mb-5">
@@ -79,10 +79,10 @@ export default function Policy() {
         <ol className="list-decimal my-2 ml-5">
           <li><P className="">{"harasses or advocates harassment of another person"}</P></li>
           <li><P className="">{"is patently offensive to the online community, any such content that promotes racism, bigotry, hatred or physical harm of any kind against any group or individual"}</P></li>
-          <li><P className="">{"involves unsolicited mass mailing or 'spamming', the transmission of 'junk mail', 'chain letters': promotes any information that is misleading, is false or that promotes illegal activities or conduct that is abusive, threatening, obscene, defamatory or libellous"}</P></li>
-          <li><P className="">{"promotes unauthorized or an illegal copy of another person's copyrighted work, such as providing pirated computer programs or links to them, providing information to circumvent manufacture-installed copy-protect devices"}</P></li>
+          <li><P className="">{"involves unsolicited mass mailing or `spamming`, the transmission of `junk mail`, `chain letters`: promotes any information that is misleading, is false or that promotes illegal activities or conduct that is abusive, threatening, obscene, defamatory or libellous"}</P></li>
+          <li><P className="">{"promotes unauthorized or an illegal copy of another person`s copyrighted work, such as providing pirated computer programs or links to them, providing information to circumvent manufacture-installed copy-protect devices"}</P></li>
           <li><P className="">{"contains restricted or password only access pages, or hidden pages or images (those not linked to or from another accessible page)"}</P></li>
-          <li><P className="">{"provides any kind of instructional information about illegal activities such as violating someone's privacy, making or buying illegal weapons, or providing or creating computer viruses, or hacking"}</P></li>
+          <li><P className="">{"provides any kind of instructional information about illegal activities such as violating someone`s privacy, making or buying illegal weapons, or providing or creating computer viruses, or hacking"}</P></li>
           <li><P className="">{"solicits passwords or personal identifying information for commercial or unlawful purposes from other users"}</P></li>
         </ol>
         <P className="font-bold">{"Any kind of misbehaviour mentioned above, can lead to account suspension and might also lead to the involvement of VIT management."}</P>
