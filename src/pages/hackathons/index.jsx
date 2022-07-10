@@ -83,7 +83,7 @@ export default function View() {
                 setSelectedHackathon(hackathon);
                 setIsModalOpen(true);
               }}
-              className="w-96 flex flex-col gap-2 bg-white p-2 text-black rounded-lg border-[2px] border-primary-200 duration-300 shadow-md hover:shadow-primary-600"
+              className="w-80 flex flex-col gap-2 bg-white p-2 text-black rounded-lg border-[2px] border-primary-200 duration-300 shadow-md hover:shadow-primary-600"
             >
               <div className="w-full flex-1 p-4 flex flex-col gap-5 justify-between bg-primary-100 rounded-lg text-center">
                 <H4 className="font-semibold">{hackathon.hackathonTitle}</H4>

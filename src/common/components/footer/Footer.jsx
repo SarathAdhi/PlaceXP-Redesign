@@ -25,7 +25,7 @@ export default function Footer() {
   return (
     <footer className="py-3 sm:py-5 flex justify-center items-center border-t-2 bg-white">
       <div className="w-11/12 flex flex-col gap-5 justify-center items-center">
-        <div className="flex gap-5 justify-center items-center">
+        <div className="w-full flex gap-5 justify-around items-center">
           <H4 className="text-primary-900 font-semibold">Connect With Us</H4>
           <div className="flex gap-5">
             {socialMediaLinks.map(({ key, href, Icon }) => (

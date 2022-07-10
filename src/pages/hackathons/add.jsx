@@ -6,11 +6,12 @@ import { showErrorAlert } from "../../utils/Alert";
 import { showErrorsToast, showSuccessToast } from "../../utils/Toast";
 
 const initialValues = {
-  title: "",
-  subject: "",
-  tag: "",
-  company: "",
-  link: "",
+  hackathonTitle: "",
+  hackathonBody: "",
+  tags: "",
+  hackathonOrganizer: "",
+  hackathonLink: "",
+  deadline: "",
 };
 
 const inputFields = [

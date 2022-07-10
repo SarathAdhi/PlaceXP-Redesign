@@ -4,7 +4,7 @@ import { Button } from "../../common/components/elements/Button";
 
 export const Card = ({ title, img, text, button }) => {
   return (
-    <div className="group w-full sm:w-96  px-6 py-5 flex flex-col justify-between items-center rounded-lg shadow-md border-2 border-primary-200 hover:border-transparent duration-300 hover:rounded-xl hover:shadow-primary-600">
+    <div className="group w-full sm:w-96 px-6 py-5 flex flex-col justify-between items-center rounded-lg shadow-md border-2 border-primary-200 hover:border-transparent duration-300 hover:rounded-xl hover:shadow-primary-600">
       <div className="flex flex-col justify-center items-center">
         <H3 className="relative text-primary-900 font-medium mb-5 text-center">
           <span className="relative z-10 font-semibold">{title}</span>
