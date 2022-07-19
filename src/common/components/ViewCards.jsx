@@ -9,21 +9,28 @@ export const ViewCards = ({
   setSearchInputText,
   children,
 }) => {
+  console.log(title);
   return (
     <>
-      <div className="mb-10 md:mb-20 w-4/5 flex flex-col lg:flex-row lg:justify-between items-center">
+      <div className="mb-10 md:mb-20 w-11/12 flex flex-col lg:flex-row lg:justify-between items-center ">
         <div className="flex flex-col  items-center lg:items-start gap-2 mb-10 lg:mb-0">
           <H3 className="text-primary-300 text-center uppercase">{title}</H3>
           <H1 className="font-extrabold text-center text-primary-900">
             {text}
           </H1>
         </div>
-        <input
-          className="shadow-xl px-2 py-1 w-full sm:w-96 rounded-md border-[2px] border-gray-300 focus:outline-none"
-          placeholder="Search here..."
-          type="text"
-          onChange={({ target }) => setSearchInputText(target.value)}
-        />
+        <div className="flex items-center flex-wrap  justify-center">
+          <input
+            className="bg-primary-200 mt-5 mb-5 mr-5  border-gray-800 shadow-xl px-2 py-1 w-full sm:w-96 rounded-md border-[2px] border-gray-300 focus:outline-none"
+            placeholder="Search here..."
+            type="text"
+            onChange={({ target }) => setSearchInputText(target.value)}
+          />
+
+          <button className="inline-block px-10 py-2 border-gray-800 mx-auto text-white bg-primary-200 rounded-lg hover:bg-blue-300 md:mx-0 text-slate-600 items-center ju">
+            filter
+          </button>
+        </div>
       </div>
       {data.length === 0 ? (
         <LoadingAnimation className="text-black !w-10 !h-10" />
@@ -35,3 +42,50 @@ export const ViewCards = ({
     </>
   );
 };
+
+
+
+
+
+
+
+  export const ViewMockCards = ({ title, text, data, children, setSearchInputText }) => {
+    return (
+      <>
+        <div className="mb-10 md:mb-20 w-11/12 flex flex-col  lg:justify-between items-center ">
+          <div className="flex flex-col  items-center lg:items-start gap-2 mb-10 lg:mb-0">
+            <H3 className="text-primary-300 text-center uppercase">
+              {/* WORRIED OF INTERVIEWS ? */}
+              {title}
+            </H3>
+            <H1 className="font-extrabold text-center text-primary-900">
+              {/* TAKE MOCK INTERVIEWS */}
+              {text}
+            </H1>
+          </div>
+          <div className="flex items-center flex-wrap flex-col sm:flex-row justify-center">
+            <div>
+              <input
+                className="bg-primary-200 mt-5 mb-5 mr-5 border-gray-800  shadow-xl px-2 py-1 w-full sm:w-96 rounded-md border-[2px] border-gray-300 focus:outline-none"
+                placeholder="Search here..."
+                type="text"
+                onChange={({ target }) => setSearchInputText(target.value)}
+              />
+            </div>
+            <div>
+              <button className="inline-block px-10 py-2 border-gray-800 mx-auto text-white bg-primary-200 rounded-lg hover:bg-blue-300 md:mx-0 text-slate-600 items-center ju">
+                filter
+              </button>
+            </div>
+          </div>
+        </div>
+        {data.length === 0 ? (
+          <LoadingAnimation className="text-black !w-10 !h-10" />
+        ) : (
+          <div className="w-full flex flex-wrap justify-center gap-5 py-20 ">
+            {children}
+          </div>
+        )}
+      </>
+    );
+  };
