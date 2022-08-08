@@ -26,10 +26,6 @@ export const ViewCards = ({
             type="text"
             onChange={({ target }) => setSearchInputText(target.value)}
           />
-
-          <button className="inline-block px-10 py-2 border-gray-800 mx-auto text-white bg-primary-200 rounded-lg hover:bg-blue-300 md:mx-0 text-slate-600 items-center ju">
-            filter
-          </button>
         </div>
       </div>
       {data.length === 0 ? (
@@ -42,9 +38,3 @@ export const ViewCards = ({
     </>
   );
 };
-
-
-
-
-
-
