@@ -3,6 +3,7 @@ import Head from "next/head";
 import clsx from "clsx";
 
 export default function PageLayout({ title, className, children }) {
+
   return (
     <>
       <Head>

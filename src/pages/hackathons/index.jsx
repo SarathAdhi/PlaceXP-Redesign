@@ -94,7 +94,10 @@ export default function View() {
                   </P>
                 )}
                 {hackathon.deadline && (
-                  <P><strong>Deadline: </strong>{hackathon.deadline}</P>
+                  <P>
+                    <strong>Deadline: </strong>
+                    {hackathon.deadline}
+                  </P>
                 )}
               </div>
               {
