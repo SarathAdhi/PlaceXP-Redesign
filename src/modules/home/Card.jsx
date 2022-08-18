@@ -1,8 +1,8 @@
 import React from "react";
 import { H3, P } from "../../common/components/elements/Text";
-import { Button } from "../../common/components/elements/Button";
+import { LinkedItemStyled } from "../../common/components/elements/LinkedItem";
 
-export const Card = ({ title, img, text, button }) => {
+export const Card = ({ title, img, text, button, link }) => {
   return (
     <div className="group w-full sm:w-96 px-6 py-5 flex flex-col justify-between items-center rounded-lg shadow-md border-2 border-primary-200 hover:border-transparent duration-300 hover:rounded-xl hover:shadow-primary-600">
       <div className="flex flex-col justify-center items-center">
@@ -13,7 +13,7 @@ export const Card = ({ title, img, text, button }) => {
         <img className="w-16" src={img} />
         <P className="text-center my-6">{text}</P>
       </div>
-      <Button>{button}</Button>
+      <LinkedItemStyled href={link}>{button}</LinkedItemStyled>
     </div>
   );
 };
