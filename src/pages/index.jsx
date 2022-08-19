@@ -11,14 +11,14 @@ const cardsDetails = [
     img: "https://img.icons8.com/external-icongeek26-outline-icongeek26/64/undefined/external-interview-office-icongeek26-outline-icongeek26.png",
     text: "Nervous about interviews? Worry no more because we have here a conglomeration of interview experiences of our seniors at various prestigous institutions.",
     button: "Explore Interviews",
-    link: "/interviews"
+    href: "/interviews"
   },
   {
     title: "Hackathons",
     img: "https://img.icons8.com/wired/64/undefined/code.png",
     text: "Wanna feel the rush behind coding competitions? Register ASAP and start participating in all the hackathons conducted by well-known organisations. ",
     button: "Explore Hackathons",
-    link: "/hackathons"
+    href: "/hackathons"
   },
   // {
   //   title: "Mock Interviews",
