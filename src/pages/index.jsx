@@ -31,7 +31,7 @@ const cardsDetails = [
     img: "https://img.icons8.com/external-sbts2018-mixed-sbts2018/58/000000/external-events-social-media-basic-1-sbts2018-mixed-sbts2018.png",
     text: "Missing out on a lot of events conducted at VITC? Don't worry, we have the collection of all the club events that will be taking place at our campus for you to participate.",
     button: "Explore Club Events",
-    link: "/club-events"
+    href: "/club-events"
   },
 ];
 
