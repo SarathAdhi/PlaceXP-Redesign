@@ -13,7 +13,7 @@ export const Card = ({ title, img, text, button, href }) => {
         <img className="w-16" src={img} />
         <P className="text-center my-6">{text}</P>
       </div>
-      <LinkedItemStyled href={link}>{button}</LinkedItemStyled>
+      <LinkedItemStyled href={href}>{button}</LinkedItemStyled>
     </div>
   );
 };
