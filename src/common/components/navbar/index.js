@@ -8,6 +8,12 @@ export const pages = [
     key: "interviews",
     name: "Interviews",
     href: "/interviews",
+    
+  },  
+  {
+    key: "mock_interviews",
+    name: "Mock Interviews",
+    href: "/interviews/mock",
   },
   {
     key: "hackathons",
