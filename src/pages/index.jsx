@@ -51,7 +51,7 @@ export default function Home() {
             <LinkedItemStyled href="#resources">
               Start Exploring
             </LinkedItemStyled>
-            <LinkedItemStyled href="#">About Us</LinkedItemStyled>
+            <LinkedItemStyled href="about-us">About Us</LinkedItemStyled>
           </div>
         </div>
         <div className="w-full sm:w-96 lg:w-1/2">
